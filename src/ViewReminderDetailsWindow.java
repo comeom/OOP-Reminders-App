@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// (Tori) show the details of the reminder here: name, notes, date, etc. (including if it's complete or not!)
+// Include + implement a button to mark reminder as completed
+
 class ViewReminderDetailsWindow extends JFrame {
     private JButton editReminderButton;
     private JButton deleteReminderButton;

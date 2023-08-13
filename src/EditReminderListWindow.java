@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// (Bryce) Implement changelistname
+// Add / Implement a cancel button 
+
 class EditReminderListWindow extends JFrame {
     private JButton changeListNameButton;
     private JButton deleteListButton;

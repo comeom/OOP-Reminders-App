@@ -14,7 +14,7 @@ public class MainGUI extends JFrame implements ActionListener {
 
     public MainGUI() {
         setTitle("Reminders App");
-        setSize(300, 150);
+        setSize(600, 300);
         setLayout(new FlowLayout());
 
         listBox = new JComboBox<>();

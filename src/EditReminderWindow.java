@@ -3,6 +3,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// (Bryce) Consider making this edit reminder window solely to change reminder details?
+// We can move the delete reminder button to "view reminder details window". May be cleaner like this
+// Implement change details here (no need for separate button)
+// Add + implement a cancel button
+
 class EditReminderWindow extends JFrame {
     private JButton changeDetailsButton;
     private JButton deleteReminderButton;

@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// (Tori) Include the Name of the Reminder List as the title
+
 class ViewReminderListWindow extends JFrame {
     private JButton editListButton;
     private JButton createReminderButton;
@@ -11,7 +13,7 @@ class ViewReminderListWindow extends JFrame {
     private static Reminder selected;
 
     public ViewReminderListWindow() {
-        setSize(300, 150);
+        setSize(500, 250);
         setLayout(new FlowLayout());
         reminderBox = new JComboBox<>();
 
