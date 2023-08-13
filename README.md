@@ -1,10 +1,10 @@
 # OOP-Reminders-App
 
 Use Case Diagram:
-![Use Case Diagram](UseCaseDiagram.png)
+![Use Case Diagram](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/3741860/share/2023-8-13/1691946784/main.svg)
 
 Class Diagram:
-![Class Diagram](ClassDiagram.png)
+![Class Diagram](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/3741860/share/2023-8-13/1691946449/main.svg)
 
 Project Objective:
 We want to design and implement a system in Java that allows a user to manage tasks through a GUI based reminders application.
