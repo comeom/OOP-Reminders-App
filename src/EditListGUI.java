@@ -8,7 +8,7 @@ class EditListGUI extends JFrame implements ActionListener {
     private JButton deleteListButton;
     private JButton saveButton;
     private JButton cancelButton;
-    private JLabel titleLable;
+    private JLabel titleLabel;
     private JTextField listNameTextField;
 
     public EditListGUI(ViewListGUI view) {
@@ -22,11 +22,11 @@ class EditListGUI extends JFrame implements ActionListener {
         saveButton = new JButton("Save");
         cancelButton = new JButton("Cancel");
         deleteListButton = new JButton("Delete Reminder List");
-
+        titleLabel = new JLabel("Reminder List Name:");
         deleteListButton.addActionListener(this);
         saveButton.addActionListener(this);
         cancelButton.addActionListener(this);
-        add(new JLabel("Reminder List Name:"));
+        add(titleLabel);
         add(listNameTextField);
         add(saveButton);
         add(cancelButton);
