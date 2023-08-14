@@ -16,7 +16,6 @@ public class Reminder implements Serializable
         this.date = date;
         this.time = time;
         this.location = location;
-        this.status = false;
     }
 
     public String getName() 
@@ -47,6 +46,15 @@ public class Reminder implements Serializable
     public boolean isStatus() 
     {
         return status;
+    }
+
+    public void setReminder(String name, String notes, String date, String time, String location)
+    {
+        this.name = name;
+        this.notes = notes;
+        this.date = date;
+        this.time = time;
+        this.location = location;
     }
 
     public void setName(String name) 

@@ -8,9 +8,10 @@ import java.awt.event.WindowEvent;
 public class MainGUI extends JFrame implements ActionListener {
     private JButton createListButton;
     private JButton viewListButton;
-    private static JComboBox<ReminderList> listBox;
-    private static FileManager fm;
-    private static ReminderList selected;
+    private JComboBox<ReminderList> listBox;
+
+    private FileManager fm;
+    private ReminderList reminderList;
 
     public MainGUI() {
         setTitle("Reminders App");
@@ -19,10 +20,9 @@ public class MainGUI extends JFrame implements ActionListener {
 
         listBox = new JComboBox<>();
         fm = new FileManager();
-        display(MainGUI.getFileManager(), MainGUI.getListBox());
-
         createListButton = new JButton("Create New Reminder List");
         viewListButton = new JButton("View Reminder List");
+        display();
 
         listBox.addActionListener(this);
         createListButton.addActionListener(this);
@@ -42,35 +42,32 @@ public class MainGUI extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == createListButton) {
-            CreateReminderListWindow createReminderListWindow = new CreateReminderListWindow();
+            CreateListGUI createReminderListWindow = new CreateListGUI(this);
             createReminderListWindow.setVisible(true);
         } else if (e.getSource() == viewListButton) {
-            ViewReminderListWindow viewReminderListWindow = new ViewReminderListWindow();
+            ViewListGUI viewReminderListWindow = new ViewListGUI(this);
             viewReminderListWindow.setVisible(true);
         } else if (e.getSource() == listBox) {
-            selected = (ReminderList) listBox.getSelectedItem();
+            reminderList = (ReminderList) listBox.getSelectedItem();
         }
     }
 
-    public static void display(FileManager fm, JComboBox<ReminderList> listbox) {
+    // refreshes reminder lists in combo box
+    public void display() {
         listBox.removeAllItems(); 
         for (ReminderList list : fm.getLists()) {
             listBox.addItem(list);
         }
         if (fm.getLists().size() > 0) {
-            selected = fm.getLists().get(0);
+            reminderList = fm.getLists().get(0);
         }
     }
 
-    public static FileManager getFileManager() {
+    public FileManager getFileManager() {
         return fm;
     }
 
-    public static JComboBox<ReminderList> getListBox() {
-        return listBox;
-    }
-
-    public static ReminderList getSelected() {
-        return selected;
+    public ReminderList getReminderList() {
+        return reminderList;
     }
 }
