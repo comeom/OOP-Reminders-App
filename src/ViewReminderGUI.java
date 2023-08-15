@@ -37,7 +37,7 @@ class ViewReminderGUI extends JFrame implements ActionListener {
         locationLabel = new JLabel("Location");
         scrollPane = new JScrollPane(notesTextArea);
         editReminderButton = new JButton("Edit Reminder");
-        deleteReminderButton = new JButton("Delete Reminder");
+        deleteReminderButton = new JButton("Complete/Delete Reminder");
         display();
 
         editReminderButton.addActionListener(this);
